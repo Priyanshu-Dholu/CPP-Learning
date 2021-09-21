@@ -1,5 +1,5 @@
-#include<stdio.h>
-
+#include<iostream>
+using namespace std;
 struct struc{
     int num;
 };
@@ -10,7 +10,7 @@ int main(){
 
     struct struc* pointer = &var;
     
-    printf("%d",pointer->num);
+    cout<<pointer->num;
 
     return 0;
 }
