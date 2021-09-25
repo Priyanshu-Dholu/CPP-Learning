@@ -57,6 +57,9 @@ int main(){
     a.setData(50);
     obj b;
     b.setData(5);
+
+    // This Object is used to add object a and b
+    // So we are passing object a and b as argument
     obj c;
     c.addNum(a,b);
     return 0;
