@@ -408,15 +408,3 @@
 //     return 0;
 // }
 
-#include <iostream>
-using namespace std;
-
-int main(){
-    cout<<"Hello World" <<endl;
-    for (int i = 0; i < 50; i++)
-    {
-        cout<<"Subhash A Patel"<<endl;
-    }
-    
-    return 0;
-}
