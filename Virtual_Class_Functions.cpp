@@ -1,28 +1,31 @@
 #include <iostream>
 using namespace std;
 
-class Base1{
-    public:
-        void hello(){
-            cout<<"Hello From Base1"<<endl;
-        }
-};
-class Base2{
-    public:
-        void hello(){
-            cout<<"Hello From Base2"<<endl;
-        }
+class Base
+{
+public:
+    virtual void print()
+    {
+        cout << "Base Class Printed\n";
+    }
 };
 
-class Derived:public Base1,public Base2{
-    public:
-        void hello(){
-            Base2::hello();
-        }
+class Derived : public Base
+{
+public:
+    void print()
+    {
+        cout << "Derived Class Printed\n";
+    }
 };
 
-int main(){
-    Derived d;
-    d.hello();
+int
+main()
+{
+    Base *baseptr;
+    Derived deri;
+
+    baseptr = &deri;
+    baseptr->print();
     return 0;
 }
