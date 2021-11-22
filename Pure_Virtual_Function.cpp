@@ -27,9 +27,22 @@ public:
     }
 };
 
+class Rectangle:public Shape
+{
+    public:
+    void getShape(){
+        cout<<"\nEnter L & B : ";
+        int l,b;
+        cin>>l>>b;
+        cout<<"Area :- "<<l*b;
+    }
+};
+
 int main()
 {
     Circle c;
     c.getShape();
+    Rectangle r;
+    r.getShape();
     return 0;
 }
