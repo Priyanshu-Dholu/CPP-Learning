@@ -20,8 +20,8 @@ class que
     int rear;
 
 public:
-
-    que(){
+    que()
+    {
         front = -1;
         rear = -1;
     }
@@ -52,17 +52,19 @@ public:
     }
 
     // To insert element in queus
-    int insert(int val){
+    int insert(int val)
+    {
         if (isFull())
         {
-            cout<<"Queue Is Full!"<<endl;
+            cout << "Queue Is Full!" << endl;
             return 0;
         }
         else if (isEmpty())
         {
             rear = front = 0;
         }
-        else{
+        else
+        {
             rear++;
         }
         ar[rear] = val;
@@ -70,25 +72,28 @@ public:
     }
 
     // To Remove an element from Queue
-    int removed(){
+    int removed()
+    {
         if (isEmpty())
         {
-            cout<<"Queue Is Empty"<<endl;
+            cout << "Queue Is Empty" << endl;
             return 0;
         }
         else if (front == rear)
         {
             front = rear = -1;
         }
-        else{
+        else
+        {
             front++;
         }
         return 0;
     }
 
     // To Show Element ar rear
-    void showRear(){
-        cout<<"Rear :- "<<ar[rear]<<endl;
+    void showRear()
+    {
+        cout << "Rear :- " << ar[rear] << endl;
     }
 };
 
@@ -98,19 +103,19 @@ int main()
     que q;
     do
     {
-        cout<<"-----------------------------------"<<endl;
-        cout<<"1. Insert"<<endl;
-        cout<<"2. Remove"<<endl;
-        cout<<"3. Check Rear"<<endl;
-        cout<<"4. Exit!"<<endl;
-        cout<<"-----------------------------------"<<endl;
-        cin>>option;
+        cout << "-----------------------------------" << endl;
+        cout << "1. Insert" << endl;
+        cout << "2. Remove" << endl;
+        cout << "3. Check Rear" << endl;
+        cout << "4. Exit!" << endl;
+        cout << "-----------------------------------" << endl;
+        cin >> option;
         switch (option)
         {
         case 1:
-            cout<<"Enter Element To Insert: ";
+            cout << "Enter Element To Insert: ";
             int in;
-            cin>>in;
+            cin >> in;
             q.insert(in);
             break;
         case 2:
@@ -123,6 +128,6 @@ int main()
             exit(1);
         }
     } while (option != 4);
-    
+
     return 0;
 }
