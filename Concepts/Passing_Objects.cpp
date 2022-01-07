@@ -39,20 +39,25 @@
 
 #include <iostream>
 using namespace std;
-class obj{
+class obj
+{
     int no;
-    public:
-        void setData(int num){
-            no = num;
-        }
-        obj addNum(obj o1,obj o2){
-            obj o3;
-            o3.no = o1.no + o2.no;
-            cout<<o3.no;
-            return o3;
-        }
+
+public:
+    void setData(int num)
+    {
+        no = num;
+    }
+    obj addNum(obj o1, obj o2)
+    {
+        obj o3;
+        o3.no = o1.no + o2.no;
+        cout << o3.no;
+        return o3;
+    }
 };
-int main(){
+int main()
+{
     obj a;
     a.setData(50);
     obj b;
@@ -61,6 +66,6 @@ int main(){
     // This Object is used to add object a and b
     // So we are passing object a and b as argument
     obj c;
-    c.addNum(a,b);
+    c.addNum(a, b);
     return 0;
 }
