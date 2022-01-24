@@ -14,12 +14,23 @@ https://www.youtube.com/watch?v=bP1ceQFbohM
 */
 
 template <typename T>
-T add(T x,T y){
-    return (x+y);
+T add(T x, T y)
+{
+    return x + y;
 }
 
-int main(){
-    cout<<"Addition of 5 & 15 :- "<<add<int>(5,15);
-    cout<<"\nAddition of 5.5 & 15.5 :- "<<add<float>(5.5,15.5);
+int main()
+{
+    // Same Function With INT
+    int a = add<int>(5, 5);
+    cout << a << endl;
+
+    // Same Function With FLOAT
+    float b = add<float>(5, 5.5);
+    cout << b << endl;
+
+    // Same Function With STRING
+    string c = add<string>("Priyanshu ", "Patel");
+    cout << c;
     return 0;
 }
